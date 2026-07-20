@@ -4,17 +4,15 @@ class Solution {
         int n = position.length;
         int low=1;
         int high=position[n-1]-position[0];
-        int ans =0;
         while(low<=high){
             int mid = low+(high-low)/2;
             if(maxamongminforce(position,mid,m)){
-                ans=mid;
                 low=mid+1;
             }else{
                 high=mid-1;
             }
         }
-        return ans;
+        return high;
     }
     public static boolean maxamongminforce(int[] arr , int mid , int m){
         int balls=1;
