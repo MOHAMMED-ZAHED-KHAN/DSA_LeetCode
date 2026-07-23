@@ -6,7 +6,7 @@ class Solution {
         for(int i : quantities){
             high=Math.max(high,i);
         }
-        int ans=0;
+        int ans=high;
         while(low<=high){
             int mid = low+(high-low)/2;
             if(minofmaxproducts(quantities,mid,n)){
