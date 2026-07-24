@@ -4,8 +4,13 @@ class Solution {
         for(int i : nums){
             mpp.put(i,mpp.getOrDefault(i,0)+1);
         }
-        for(Map.Entry<Integer,Integer> ele : mpp.entrySet()){
-            if(ele.getValue()>2){
+        // for(Map.Entry<Integer,Integer> ele : mpp.entrySet()){
+        //     if(ele.getValue()>2){
+        //         return false;
+        //     }
+        // }
+        for(int val : mpp.values()){
+            if(val>2){
                 return false;
             }
         }
